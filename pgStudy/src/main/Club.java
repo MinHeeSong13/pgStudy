@@ -1,8 +1,8 @@
 package main;
 
 public class Club extends University{
-	private String clubName;
-	private String clubNo;
+	private String clubName; // 동아리 이름
+	private String clubNo; // 동아리 코드
 	private String clubLocaion; // 동아리실 위치
 	private int clubMemCnt; // 동아리 구성원 수
 	private String actContent; // 활동내용

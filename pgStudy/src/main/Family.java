@@ -1,7 +1,7 @@
 package main;
 
 public class Family extends Wedding{
-	private String member;
+	private String member; // 구성원
 	private char comAnimalYn; // 반려동물 여부
 	private String comAnimal; // 반려동물
 	private int comAnimalCnt; // 반려동물 수

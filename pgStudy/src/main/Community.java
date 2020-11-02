@@ -1,7 +1,7 @@
 package main;
 
 public class Community extends Person{
-	private String goal;
+	private String goal; // 공동체의 목표
 
 	public Community() {}
 

@@ -1,10 +1,10 @@
 package main;
 
 public class UniDepartment extends University{
-	private String uniDeptName;
-	private int tuition;
+	private String uniDeptName; // 학과명
+	private int tuition; // 등록금
 	private int deptExpense; //학과비
-	private String deptNo;
+	private String deptNo; // 학과 코드
 	
 	public UniDepartment(String uniDeptName, int tuition, int deptExpense, String deptNo) {
 		super();

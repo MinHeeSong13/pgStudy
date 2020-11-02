@@ -1,8 +1,8 @@
 package main;
 
 public class Professor extends UniDepartment{
-	private String professorNo;
-	private String deptNo;
+	private String professorNo; // 교수번호
+	private String deptNo; // 학과코드
 	private String teacher; // 교원(전임,초빙,겸임,시간강사)
 
 	public Professor(String uniDeptName, int tuition, int deptExpense, String deptNo) {

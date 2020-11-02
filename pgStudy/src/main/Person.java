@@ -1,13 +1,13 @@
 package main;
 
 public class Person {
-	private String name;
+	private String name; // 이름
 	private String rrn; // 주민등록번호
-	private char gender;
+	private char gender; // 성별
 	private String nationality; // 국적
-	private String address;
-	private String phone;    
-	private String email;
+	private String address; // 주소
+	private String phone; // 전화번호
+	private String email; // 이메일
 	
 	public Person() {}
 	
@@ -65,7 +65,5 @@ public class Person {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
 
 }

@@ -2,7 +2,7 @@ package main;
 
 public class University extends Community{
 	private String uniName; // 학교명
-	private String uniLocation;
+	private String uniLocation; // 학교 위치
 	private double empRate; // 취업률
 	private int stuCnt; // 재적학생 수
 	private double adRate; // 입학경쟁률

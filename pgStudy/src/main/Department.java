@@ -1,7 +1,7 @@
 package main;
 
 public class Department extends Job{
-	private String deptName;
+	private String deptName; // 부서명
 	private int deptCnt; // 부서 인원
 	private String asTask; // 담당업무
 	

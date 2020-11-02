@@ -1,14 +1,14 @@
 package main;
 
 public class Student extends UniDepartment {
-	private String studentNo;
+	private String studentNo; // 학번
 	private String professorNo; // 지도교수번호
-	private String deptNo;
-	private String graduateYn;
-	private String absenceYn;
-	private String returnYn;
-	private int totalPoint;
-	private int currentPoint;
+	private String deptNo; // 학과 코드
+	private String graduateYn; // 졸업 여부
+	private String absenceYn; // 휴학 여부
+	private String returnYn; // 복학 여부
+	private int totalPoint; // 총평점
+	private int currentPoint; // 현재 학점
 	private char clubYn; // 동아리 가입 여부
 	private String[] joinClub; // 가입한 동아리
 	private char tutionPayYn; // 등록금 납부 여부

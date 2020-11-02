@@ -1,9 +1,9 @@
 package main;
 
 public class Job extends Community{
-	private String jobName;
+	private String jobName; // 직업명
 	private String corName; // 회사명
-	private String salary;
+	private String salary; // 급여
 	private String comLocation; // 회사위치
 	private String rank; // 직급
 	
