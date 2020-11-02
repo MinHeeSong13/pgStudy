@@ -1,5 +1,7 @@
 package main;
 
+import java.sql.Date;
+
 public class Family extends Wedding{
 	private String member; // 구성원
 	private char comAnimalYn; // 반려동물 여부
@@ -7,8 +9,9 @@ public class Family extends Wedding{
 	private int comAnimalCnt; // 반려동물 수
 	
 	public Family() {}
-	public Family(String location, char parkingYn, int cost, String banquetFood) {
-		super(location, parkingYn, cost, banquetFood);
+	
+	public Family(String location, char parkingYn, int cost, String banquetFood, Date wdDate) {
+		super(location, parkingYn, cost, banquetFood, wdDate);
 	}
 	public Family(String name, String rrn, char gender, String nationality, String address, String phone,
 			String email) {
