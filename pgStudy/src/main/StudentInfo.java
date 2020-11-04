@@ -1,28 +1,30 @@
 package main;
 
-public class Student extends UniDepartment {
+public class StudentInfo extends UniDepartment {
 	private String studentNo; // 학번
 	private String professorNo; // 지도교수번호
-	private String deptNo; // 학과 코드
-	private String graduateYn; // 졸업 여부
-	private String absenceYn; // 휴학 여부
-	private String returnYn; // 복학 여부
+	private String uniDeptNo; // 학과 코드
+	@SuppressWarnings("unused")
+	private enum registerYn{
+		G,A,R // G : 졸업, A : 휴학, R : 재학
+	}
 	private int totalPoint; // 총평점
 	private int currentPoint; // 현재 학점
 	private char clubYn; // 동아리 가입 여부
 	private String[] joinClub; // 가입한 동아리
 	private char tutionPayYn; // 등록금 납부 여부
 	
-	public Student(String uniDeptName, int tuition, int deptExpense, String deptNo, String studentNo,
-			String professorNo, String deptNo2, String graduateYn, String absenceYn, String returnYn, int totalPoint,
-			int currentPoint, char clubYn, String[] joinClub, char tutionPayYn) {
-		super(uniDeptName, tuition, deptExpense, deptNo);
+	
+	public StudentInfo(String uniDeptName, int tuition, int deptExpense, String uniuniDeptNo) {
+		super(uniDeptName, tuition, deptExpense, uniuniDeptNo);
+	}
+	public StudentInfo(String uniDeptName, int tuition, int deptExpense, String uniuniDeptNo, String studentNo,
+			String professorNo, String uniDeptNo, int totalPoint, int currentPoint, char clubYn, String[] joinClub,
+			char tutionPayYn) {
+		super(uniDeptName, tuition, deptExpense, uniuniDeptNo);
 		this.studentNo = studentNo;
 		this.professorNo = professorNo;
-		deptNo = deptNo2;
-		this.graduateYn = graduateYn;
-		this.absenceYn = absenceYn;
-		this.returnYn = returnYn;
+		this.uniDeptNo = uniDeptNo;
 		this.totalPoint = totalPoint;
 		this.currentPoint = currentPoint;
 		this.clubYn = clubYn;
@@ -41,29 +43,11 @@ public class Student extends UniDepartment {
 	public void setProfessorNo(String professorNo) {
 		this.professorNo = professorNo;
 	}
-	public String getDeptNo() {
-		return deptNo;
+	public String getuniDeptNo() {
+		return uniDeptNo;
 	}
-	public void setDeptNo(String deptNo) {
-		this.deptNo = deptNo;
-	}
-	public String getGraduateYn() {
-		return graduateYn;
-	}
-	public void setGraduateYn(String graduateYn) {
-		this.graduateYn = graduateYn;
-	}
-	public String getAbsenceYn() {
-		return absenceYn;
-	}
-	public void setAbsenceYn(String absenceYn) {
-		this.absenceYn = absenceYn;
-	}
-	public String getReturnYn() {
-		return returnYn;
-	}
-	public void setReturnYn(String returnYn) {
-		this.returnYn = returnYn;
+	public void setuniDeptNo(String uniDeptNo) {
+		this.uniDeptNo = uniDeptNo;
 	}
 	public int getTotalPoint() {
 		return totalPoint;

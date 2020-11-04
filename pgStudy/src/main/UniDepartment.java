@@ -4,14 +4,14 @@ public class UniDepartment extends University{
 	private String uniDeptName; // 학과명
 	private int tuition; // 등록금
 	private int deptExpense; //학과비
-	private String deptNo; // 학과 코드
+	private String uniDeptNo; // 학과 코드
 	
-	public UniDepartment(String uniDeptName, int tuition, int deptExpense, String deptNo) {
+	public UniDepartment(String uniDeptName, int tuition, int deptExpense, String uniDeptNo) {
 		super();
 		this.uniDeptName = uniDeptName;
 		this.tuition = tuition;
 		this.deptExpense = deptExpense;
-		this.deptNo = deptNo;
+		this.uniDeptNo = uniDeptNo;
 	}
 	public String getUniDeptName() {
 		return uniDeptName;
@@ -31,12 +31,11 @@ public class UniDepartment extends University{
 	public void setDeptExpense(int deptExpense) {
 		this.deptExpense = deptExpense;
 	}
-	public String getDeptNo() {
-		return deptNo;
+	public String getuniDeptNo() {
+		return uniDeptNo;
 	}
-	public void setDeptNo(String deptNo) {
-		this.deptNo = deptNo;
+	public void setuniDeptNo(String uniDeptNo) {
+		this.uniDeptNo = uniDeptNo;
 	}
-	
 	
 }
