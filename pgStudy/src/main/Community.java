@@ -7,11 +7,10 @@ public class Community extends Person{
 	private Date goalStart; // 목표 시작시간
 	private Date goalEnd; // 목표 끝난 시간
 
-	public Community() {}
-
-	public Community(String name, String rrn, char gender, String nationality, String address, String phone,
-			String email) {
-		super(name, rrn, gender, nationality, address, phone, email);
+	public Community() {}	
+	public Community(String name, String rrn, String nationality, String postCode, String address, String phone,
+			String email, String jobName, double height, double weight) {
+		super(name, rrn, nationality, postCode, address, phone, email, jobName, height, weight);
 	}
 	public Community(String goal, Date goalStart, Date goalEnd) {
 		super();

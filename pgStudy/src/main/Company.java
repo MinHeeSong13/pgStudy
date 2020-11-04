@@ -4,33 +4,18 @@ import java.sql.Date;
 
 public class Company extends Community{
 	private String corName; // 회사명
-	private String deptNo; // 부서코드
-	private int salaryLv; // 급여 등급
+	private String corCode; // 회사코드
 	private String comLocation; // 회사위치
-	private String rank; // 직급
+	private int capAmount; // 자본금
+	private String comType; // 기업구분 (대기업, 중소 등)
 	
 	public Company() {}
-	public Company(String name, String rrn, char gender, String nationality, String address, String phone,
-			String email) {
-		super(name, rrn, gender, nationality, address, phone, email);
+	public Company(String name, String rrn, String nationality, String postCode, String address, String phone,
+			String email, String jobName, double height, double weight) {
+		super(name, rrn, nationality, postCode, address, phone, email, jobName, height, weight);
 	}
-	
 	public Company(String goal, Date goalStart, Date goalEnd) {
 		super(goal, goalStart, goalEnd);
-	}
-	public Company(String corName, String deptNo, int salaryLv, String comLocation, String rank) {
-		super();
-		this.corName = corName;
-		this.deptNo = deptNo;
-		this.salaryLv = salaryLv;
-		this.comLocation = comLocation;
-		this.rank = rank;
-	}
-	public String getdeptNo() {
-		return deptNo;
-	}
-	public void setdeptNo(String deptNo) {
-		this.deptNo = deptNo;
 	}
 	public String getCorName() {
 		return corName;
@@ -38,11 +23,11 @@ public class Company extends Community{
 	public void setCorName(String corName) {
 		this.corName = corName;
 	}
-	public int getSalary() {
-		return salaryLv;
+	public String getCorCode() {
+		return corCode;
 	}
-	public void setSalary(int salaryLv) {
-		this.salaryLv = salaryLv;
+	public void setCorCode(String corCode) {
+		this.corCode = corCode;
 	}
 	public String getComLocation() {
 		return comLocation;
@@ -50,23 +35,17 @@ public class Company extends Community{
 	public void setComLocation(String comLocation) {
 		this.comLocation = comLocation;
 	}
-	public String getRank() {
-		return rank;
+	public int getCapAmount() {
+		return capAmount;
 	}
-	public void setRank(String rank) {
-		this.rank = rank;
+	public void setCapAmount(int capAmount) {
+		this.capAmount = capAmount;
 	}
-	public String getDeptNo() {
-		return deptNo;
+	public String getComType() {
+		return comType;
 	}
-	public void setDeptNo(String deptNo) {
-		this.deptNo = deptNo;
+	public void setComType(String comType) {
+		this.comType = comType;
 	}
-	public int getSalaryLv() {
-		return salaryLv;
-	}
-	public void setSalaryLv(int salaryLv) {
-		this.salaryLv = salaryLv;
-	}
-
+	
 }
