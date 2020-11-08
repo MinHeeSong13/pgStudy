@@ -3,7 +3,7 @@ package main;
 import java.sql.Date;
 
 public class Wedding extends Community{
-	private String location; // 결혼식장 위치
+	private String wdAddress; // 결혼식장 주소
 	private char parkingYn; // 주차장 여부
 	private int cost; // 비용
 	private String banquetFood; // 연회 음식
@@ -14,30 +14,40 @@ public class Wedding extends Community{
 	private String photographer; // 사진사
 	private String officiate; // 주례사
 	private String mc; // 사회자
+	private Date createDt; // 생성일
+	private Date updateDt; // 수정일
 	
 	public Wedding() {}
-	
-	public Wedding(String name, String rrn, char gender, String nationality, String address, String phone,
-			String email) {
-		super(name, rrn, gender, nationality, address, phone, email);
+	public Wedding(String ccode, String goal, Date goalStart, Date goalEnd) {
+		super(ccode, goal, goalStart, goalEnd);
 	}
-	public Wedding(String goal, Date goalStart, Date goalEnd) {
-		super(goal, goalStart, goalEnd);
+	public Wedding(String pCode, String name, String rrn, String nationality, String postCode, String address,
+			String phone, String email, String jobCode, double height, double weight, Date createDt, Date updateDt) {
+		super(pCode, name, rrn, nationality, postCode, address, phone, email, jobCode, height, weight, createDt, updateDt);
 	}
-	public Wedding(String location, char parkingYn, int cost, String banquetFood, Date wdDate) {
+	public Wedding(String wdAddress, char parkingYn, int cost, String banquetFood, Date wdDate, int guestCnt,
+			int congrateMoney, String honeymoon, String photographer, String officiate, String mc, Date createDt,
+			Date updateDt) {
 		super();
-		this.location = location;
+		this.wdAddress = wdAddress;
 		this.parkingYn = parkingYn;
 		this.cost = cost;
 		this.banquetFood = banquetFood;
 		this.wdDate = wdDate;
+		this.guestCnt = guestCnt;
+		this.congrateMoney = congrateMoney;
+		this.honeymoon = honeymoon;
+		this.photographer = photographer;
+		this.officiate = officiate;
+		this.mc = mc;
+		this.createDt = createDt;
+		this.updateDt = updateDt;
 	}
-
-	public String getLocation() {
-		return location;
+	public String getWdAddress() {
+		return wdAddress;
 	}
-	public void setLocation(String location) {
-		this.location = location;
+	public void setWdAddress(String wdAddress) {
+		this.wdAddress = wdAddress;
 	}
 	public char getParkingYn() {
 		return parkingYn;
@@ -99,5 +109,16 @@ public class Wedding extends Community{
 	public void setMc(String mc) {
 		this.mc = mc;
 	}
-	
+	public Date getCreateDt() {
+		return createDt;
+	}
+	public void setCreateDt(Date createDt) {
+		this.createDt = createDt;
+	}
+	public Date getUpdateDt() {
+		return updateDt;
+	}
+	public void setUpdateDt(Date updateDt) {
+		this.updateDt = updateDt;
+	}
 }

@@ -1,6 +1,9 @@
 package main;
 
+import java.sql.Date;
+
 public class Person {
+	private String pCode; // 사람코드. 대리키 (P + 시퀀스)
 	private String name; // 이름
 	private String rrn; // 주민등록번호
 	private String nationality; // 국적
@@ -8,14 +11,17 @@ public class Person {
 	private String address; // 주소
 	private String phone; // 전화번호
 	private String email; // 이메일
-	private String jobName; // 직업명 (학생, 교수, 회사원 등)
+	private String jobCode; // 직업코드 
 	private double height; // 키
 	private double weight; // 몸무게
+	private Date createDt; // 생성일
+	private Date updateDt; // 수정일
 	
 	public Person() {}
-	public Person(String name, String rrn, String nationality, String postCode, String address, String phone,
-			String email, String jobName, double height, double weight) {
+	public Person(String pCode, String name, String rrn, String nationality, String postCode, String address,
+			String phone, String email, String jobCode, double height, double weight, Date createDt, Date updateDt) {
 		super();
+		this.pCode = pCode;
 		this.name = name;
 		this.rrn = rrn;
 		this.nationality = nationality;
@@ -23,9 +29,11 @@ public class Person {
 		this.address = address;
 		this.phone = phone;
 		this.email = email;
-		this.jobName = jobName;
+		this.jobCode = jobCode;
 		this.height = height;
 		this.weight = weight;
+		this.createDt = createDt;
+		this.updateDt = updateDt;
 	}
 	public String getName() {
 		return name;
@@ -69,11 +77,11 @@ public class Person {
 	public void setPostCode(String postCode) {
 		this.postCode = postCode;
 	}
-	public String getJobName() {
-		return jobName;
+	public String getJobCode() {
+		return jobCode;
 	}
-	public void setJobName(String jobName) {
-		this.jobName = jobName;
+	public void setJobCode(String jobCode) {
+		this.jobCode = jobCode;
 	}
 	public double getHeight() {
 		return height;
@@ -86,6 +94,24 @@ public class Person {
 	}
 	public void setWeight(double weight) {
 		this.weight = weight;
+	}
+	public Date getCreateDt() {
+		return createDt;
+	}
+	public void setCreateDt(Date createDt) {
+		this.createDt = createDt;
+	}
+	public Date getUpdateDt() {
+		return updateDt;
+	}
+	public void setUpdateDt(Date updateDt) {
+		this.updateDt = updateDt;
+	}
+	public String getpCode() {
+		return pCode;
+	}
+	public void setpCode(String pCode) {
+		this.pCode = pCode;
 	}
 	
 }

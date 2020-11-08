@@ -1,35 +1,48 @@
 package main;
 
+import java.sql.Date;
+import java.util.List;
+
 public class StudentInfo extends UniDepartment {
 	private String studentNo; // 학번
 	private String professorNo; // 지도교수번호
 	private String uniDeptNo; // 학과 코드
-	@SuppressWarnings("unused")
-	private enum registerYn{
-		G,A,R // G : 졸업, A : 휴학, R : 재학
-	}
+	private RegisterYn registerYn; // 재학 여부
 	private int totalPoint; // 총평점
 	private int currentPoint; // 현재 학점
 	private char clubYn; // 동아리 가입 여부
-	private String[] joinClub; // 가입한 동아리
 	private char tutionPayYn; // 등록금 납부 여부
+	private Date createDt; // 생성일
+	private Date updateDt; // 수정일
 	
-	
-	public StudentInfo(String uniDeptName, int tuition, int deptExpense, String uniuniDeptNo) {
-		super(uniDeptName, tuition, deptExpense, uniuniDeptNo);
+	public StudentInfo() {}
+	public StudentInfo(String uniDeptName, int tuition, int deptExpense, String uniDeptNo) {
+		super(uniDeptName, tuition, deptExpense, uniDeptNo);
 	}
-	public StudentInfo(String uniDeptName, int tuition, int deptExpense, String uniuniDeptNo, String studentNo,
-			String professorNo, String uniDeptNo, int totalPoint, int currentPoint, char clubYn, String[] joinClub,
-			char tutionPayYn) {
-		super(uniDeptName, tuition, deptExpense, uniuniDeptNo);
+	public StudentInfo(String ccode, String goal, Date goalStart, Date goalEnd) {
+		super(ccode, goal, goalStart, goalEnd);
+	}
+	public StudentInfo(String uniName, String uniAddress, double empRate, int stuCnt, int noGraduateCnt, double adRate,
+			double domRate, double graPointAvg, Date createDt, Date updateDt) {
+		super(uniName, uniAddress, empRate, stuCnt, noGraduateCnt, adRate, domRate, graPointAvg, createDt, updateDt);
+	}
+	public StudentInfo(String pCode, String name, String rrn, String nationality, String postCode, String address,
+			String phone, String email, String jobCode, double height, double weight, Date createDt, Date updateDt) {
+		super(pCode, name, rrn, nationality, postCode, address, phone, email, jobCode, height, weight, createDt, updateDt);
+	}
+	public StudentInfo(String studentNo, String professorNo, String uniDeptNo, RegisterYn registerYn, int totalPoint,
+			int currentPoint, char clubYn, char tutionPayYn, Date createDt, Date updateDt) {
+		super();
 		this.studentNo = studentNo;
 		this.professorNo = professorNo;
 		this.uniDeptNo = uniDeptNo;
+		this.registerYn = registerYn;
 		this.totalPoint = totalPoint;
 		this.currentPoint = currentPoint;
 		this.clubYn = clubYn;
-		this.joinClub = joinClub;
 		this.tutionPayYn = tutionPayYn;
+		this.createDt = createDt;
+		this.updateDt = updateDt;
 	}
 	public String getStudentNo() {
 		return studentNo;
@@ -67,18 +80,34 @@ public class StudentInfo extends UniDepartment {
 	public void setClubYn(char clubYn) {
 		this.clubYn = clubYn;
 	}
-	public String[] getJoinClub() {
-		return joinClub;
-	}
-	public void setJoinClub(String[] joinClub) {
-		this.joinClub = joinClub;
-	}
 	public char getTutionPayYn() {
 		return tutionPayYn;
 	}
 	public void setTutionPayYn(char tutionPayYn) {
 		this.tutionPayYn = tutionPayYn;
 	}
-	
-	
+	public String getUniDeptNo() {
+		return uniDeptNo;
+	}
+	public void setUniDeptNo(String uniDeptNo) {
+		this.uniDeptNo = uniDeptNo;
+	}
+	public RegisterYn getRegisterYn() {
+		return registerYn;
+	}
+	public void setRegisterYn(RegisterYn registerYn) {
+		this.registerYn = registerYn;
+	}
+	public Date getCreateDt() {
+		return createDt;
+	}
+	public void setCreateDt(Date createDt) {
+		this.createDt = createDt;
+	}
+	public Date getUpdateDt() {
+		return updateDt;
+	}
+	public void setUpdateDt(Date updateDt) {
+		this.updateDt = updateDt;
+	}
 }
